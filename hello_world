@@ -1,0 +1,24 @@
+#include <16f887.h>
+#fuses   nowdt
+#fuses   nobrownout
+#fuses   nolvp
+#fuses   xt
+#use     delay(crystal=400000)
+#byte    pb=8
+
+main(){
+   set_tris_d(0x00);
+   pb=0x00;
+   while (true){
+      output_high(pin_d5);
+      delay_ms(1000);
+      output_low(pin_d5);
+      delay_ms(1000);
+   
+   }//end while
+
+
+
+
+}//end main
+
